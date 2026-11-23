@@ -1,0 +1,129 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f3f5f9;
+    color: #263238;
+    padding: 30px 16px;
+}
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+}
+
+header {
+    margin-bottom: 25px;
+}
+
+header h1 {
+    margin-bottom: 8px;
+    color: #243b65;
+}
+
+header p {
+    color: #667085;
+}
+
+.panel {
+    background: white;
+    padding: 22px;
+    border-radius: 10px;
+    margin-bottom: 22px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.panel h2 {
+    margin-bottom: 18px;
+    font-size: 19px;
+}
+
+form,
+.filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+input,
+select {
+    min-width: 150px;
+    flex: 1;
+    padding: 11px;
+    border: 1px solid #d0d5dd;
+    border-radius: 6px;
+}
+
+button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 6px;
+    background: #315da8;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #23477f;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 18px;
+}
+
+th,
+td {
+    text-align: left;
+    padding: 12px;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+th {
+    background: #edf2fa;
+}
+
+td button {
+    margin: 3px;
+}
+
+.table-wrapper {
+    overflow-x: auto;
+}
+
+#statistics p {
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+}
+
+#validationResult,
+#highSalaryResult,
+#totalSalary {
+    margin: 10px 0;
+}
+
+@media (max-width: 650px) {
+    body {
+        padding: 18px 10px;
+    }
+
+    .panel {
+        padding: 15px;
+    }
+
+    form,
+    .filters {
+        flex-direction: column;
+    }
+
+    input,
+    select {
+        width: 100%;
+    }
+}

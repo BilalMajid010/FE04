@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Management</title>
+  <script type="module" crossorigin src="/assets/index-D_fYAW-X.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-DJ9guPnf.css">
+</head>
+<body>
+
+    <main class="container">
+        <header>
+            <h1>Employee Management</h1>
+            <p>Manage employees and department information</p>
+        </header>
+
+        <section class="panel">
+            <h2>Add Employee</h2>
+
+            <form id="employeeForm">
+                <input type="hidden" id="employeeId">
+
+                <input
+                    type="text"
+                    id="name"
+                    placeholder="Employee Name"
+                    required
+                >
+
+                <select id="department" required>
+                    <option value="">Select Department</option>
+                </select>
+
+                <input
+                    type="number"
+                    id="salary"
+                    placeholder="Monthly Salary"
+                    min="1"
+                    required
+                >
+
+                <select id="status">
+                    <option value="Active">Active</option>
+                    <option value="Inactive">Inactive</option>
+                </select>
+
+                <button type="submit" id="submitButton">Add Employee</button>
+                <button type="button" id="cancelButton" hidden>Cancel Edit</button>
+            </form>
+        </section>
+
+        <section class="panel">
+            <h2>Employee Directory</h2>
+
+            <div class="filters">
+                <input
+                    type="search"
+                    id="search"
+                    placeholder="Search employee..."
+                >
+
+                <select id="departmentFilter">
+                    <option value="All">All Departments</option>
+                </select>
+
+                <select id="statusFilter">
+                    <option value="All">All Statuses</option>
+                    <option value="Active">Active</option>
+                    <option value="Inactive">Inactive</option>
+                </select>
+            </div>
+
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Department</th>
+                            <th>Salary</th>
+                            <th>Status</th>
+                            <th>City</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="employeeTable"></tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="panel">
+            <h2>Department Statistics</h2>
+            <div id="statistics"></div>
+        </section>
+
+        <section class="panel">
+            <h2>Application Validation</h2>
+            <p id="validationResult"></p>
+            <p id="highSalaryResult"></p>
+            <p id="totalSalary"></p>
+        </section>
+    </main>
+
+</body>
+</html>
